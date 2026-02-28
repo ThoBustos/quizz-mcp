@@ -24,7 +24,7 @@ export default function QuizError({
         <div className="flex justify-center gap-3">
           <button
             onClick={() => reset()}
-            className="bg-primary text-bg hover:bg-primary/90 rounded-lg px-4 py-2 transition-colors"
+            className="bg-primary text-bg rounded-lg px-4 py-2 transition-opacity hover:opacity-90"
           >
             Try again
           </button>

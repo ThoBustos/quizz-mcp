@@ -34,8 +34,7 @@ export function OptionButton({
     stateClass = "selected";
   }
 
-  const focusedClass =
-    focused && !disabled && !correct && !incorrect ? "ring-2 ring-primary/50" : "";
+  const focusedClass = focused && !disabled && !correct && !incorrect ? "ring-2 ring-primary" : "";
 
   return (
     <button

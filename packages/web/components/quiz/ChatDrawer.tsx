@@ -363,7 +363,7 @@ export function ChatDrawer({
               type="button"
               onClick={sendMessage}
               disabled={!input.trim() || isStreaming}
-              className="bg-primary text-bg hover:bg-primary/90 self-end rounded-lg px-4 transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+              className="bg-primary text-bg self-end rounded-lg px-4 transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path

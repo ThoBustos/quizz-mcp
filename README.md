@@ -119,15 +119,17 @@ Or use the `quiz_stats` tool to see:
 - Average scores by difficulty
 - Recent session history
 
-## Theme
+## Themes
 
-The UI uses a terminal-inspired dark theme with:
-- Dark background (`#0d1117`)
-- Matrix green for correct answers (`#00ff41`)
-- Gold/amber accents (`#d4a574`)
-- Monospace fonts throughout
+Go to Settings (gear icon) to configure your theme:
 
-Theme customization is on the roadmap.
+| Theme | Style |
+|-------|-------|
+| **Hacker** | Matrix green terminal aesthetic (default) |
+| **Claude Community** | Warm Claude orange tones |
+| **Minimal** | Clean blue GitHub-style |
+
+Your preference is saved locally.
 
 ## Troubleshooting
 

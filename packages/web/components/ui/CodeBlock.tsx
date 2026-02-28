@@ -1,6 +1,6 @@
 "use client";
 
-import { Highlight, themes } from "prism-react-renderer";
+import { Highlight, PrismTheme } from "prism-react-renderer";
 
 interface CodeBlockProps {
   code: string;
@@ -9,42 +9,44 @@ interface CodeBlockProps {
   showLineNumbers?: boolean;
 }
 
-// Custom theme matching the terminal aesthetic
-const terminalTheme = {
-  ...themes.nightOwl,
+// Theme that uses CSS variables for dynamic theming
+const cssVarTheme: PrismTheme = {
   plain: {
-    color: "#00ff41",
-    backgroundColor: "#0a0a0a",
+    color: "var(--primary)",
+    backgroundColor: "var(--bg)",
   },
   styles: [
-    ...themes.nightOwl.styles,
     {
       types: ["comment", "prolog", "doctype", "cdata"],
-      style: { color: "#006b1a", fontStyle: "italic" as const },
+      style: { color: "var(--text-muted)", fontStyle: "italic" as const },
     },
     {
       types: ["keyword", "operator"],
-      style: { color: "#ff79c6" },
+      style: { color: "var(--primary)" },
     },
     {
       types: ["string", "char"],
-      style: { color: "#7ee787" },
+      style: { color: "var(--accent)" },
     },
     {
       types: ["function"],
-      style: { color: "#79c0ff" },
+      style: { color: "var(--text)" },
     },
     {
       types: ["number", "boolean"],
-      style: { color: "#f78166" },
+      style: { color: "var(--error)" },
     },
     {
       types: ["variable", "constant"],
-      style: { color: "#ffa657" },
+      style: { color: "var(--text)" },
     },
     {
       types: ["class-name", "type"],
-      style: { color: "#ff7b72" },
+      style: { color: "var(--primary)" },
+    },
+    {
+      types: ["punctuation"],
+      style: { color: "var(--text-muted)" },
     },
   ],
 };
@@ -63,7 +65,7 @@ export function CodeBlock({ code, language, label, showLineNumbers = false }: Co
           {label}
         </div>
       )}
-      <Highlight theme={terminalTheme} code={code.trim()} language={normalizedLang}>
+      <Highlight theme={cssVarTheme} code={code.trim()} language={normalizedLang}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={`${className} overflow-x-auto p-4 font-mono text-sm`} style={style}>
             {tokens.map((line, i) => (

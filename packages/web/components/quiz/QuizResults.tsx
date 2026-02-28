@@ -29,11 +29,14 @@ export function QuizResults({ session, onReview, onRetry }: QuizResultsProps) {
           {score.correct} of {score.total} correct
         </p>
         <div
-          className={`inline-block rounded-full px-4 py-2 text-sm ${
-            passed
-              ? "bg-accent/20 text-accent border-accent border"
-              : "bg-error/20 text-error border-error border"
+          className={`inline-block rounded-full border px-4 py-2 text-sm ${
+            passed ? "border-accent text-accent" : "border-error text-error"
           }`}
+          style={{
+            background: passed
+              ? "color-mix(in srgb, var(--accent) 20%, transparent)"
+              : "color-mix(in srgb, var(--error) 20%, transparent)",
+          }}
         >
           {passed ? "PASSED" : "FAILED"} - {config.difficulty.toUpperCase()} level
         </div>
@@ -48,9 +51,12 @@ export function QuizResults({ session, onReview, onRetry }: QuizResultsProps) {
             return (
               <div
                 key={i}
-                className={`rounded border p-3 ${
-                  answer.isCorrect ? "border-accent/50 bg-accent/5" : "border-error/50 bg-error/5"
-                }`}
+                className={`rounded border p-3 ${answer.isCorrect ? "border-accent" : "border-error"}`}
+                style={{
+                  background: answer.isCorrect
+                    ? "color-mix(in srgb, var(--accent) 5%, transparent)"
+                    : "color-mix(in srgb, var(--error) 5%, transparent)",
+                }}
               >
                 <div className="flex items-start gap-2">
                   <span className={answer.isCorrect ? "text-accent" : "text-error"}>
@@ -78,7 +84,7 @@ export function QuizResults({ session, onReview, onRetry }: QuizResultsProps) {
             <button
               type="button"
               onClick={onRetry}
-              className="bg-primary text-bg hover:bg-primary/90 flex-1 rounded-lg px-4 py-3 font-medium transition-colors"
+              className="bg-primary text-bg flex-1 rounded-lg px-4 py-3 font-medium transition-opacity hover:opacity-90"
             >
               Try Again
             </button>

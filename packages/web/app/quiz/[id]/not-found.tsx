@@ -15,7 +15,7 @@ export default function QuizNotFound() {
         </div>
         <Link
           href="/"
-          className="bg-primary text-bg hover:bg-primary/90 inline-block rounded-lg px-4 py-2 transition-colors"
+          className="bg-primary text-bg inline-block rounded-lg px-4 py-2 transition-opacity hover:opacity-90"
         >
           Go home
         </Link>

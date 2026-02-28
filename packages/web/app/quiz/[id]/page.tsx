@@ -205,7 +205,7 @@ export default function QuizPage() {
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="bg-primary text-bg hover:bg-primary/90 flex-1 rounded-lg px-4 py-3 font-medium transition-colors"
+                  className="bg-primary text-bg flex-1 rounded-lg px-4 py-3 font-medium transition-opacity hover:opacity-90"
                 >
                   {currentIndex + 1 >= session.questions.length ? "See Results" : "Next Question →"}
                 </button>
