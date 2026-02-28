@@ -1,0 +1,38 @@
+{
+  "name": "@quizz/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser-based quiz UI for quizz-mcp",
+  "scripts": {
+    "dev": "next dev -p 9004",
+    "build": "next build",
+    "start": "next start -p 9004",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "@quizz/core": "workspace:*",
+    "better-sqlite3": "^11.0.0",
+    "katex": "^0.16.33",
+    "next": "^15.0.0",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -14,6 +14,7 @@ export default tseslint.config(
       "**/coverage/**",
       "**/*.config.js",
       "**/*.config.ts",
+      "**/next-env.d.ts",
     ],
   },
 
@@ -85,7 +86,7 @@ export default tseslint.config(
 
   // Test files
   {
-    files: ["**/*.test.ts", "**/*.spec.ts"],
+    files: ["**/*.test.ts", "**/*.spec.ts", "**/*.test.tsx", "**/*.spec.tsx"],
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
