@@ -1,0 +1,66 @@
+{
+  "name": "quizz-mcp-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server for generating quizzes from Claude Code sessions",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @quizz/core build",
+    "build:mcp": "pnpm --filter @quizz/mcp build",
+    "build:web": "pnpm --filter @quizz/web build",
+    "dev": "pnpm --filter @quizz/web dev",
+    "dev:mcp": "pnpm --filter @quizz/mcp dev",
+    "start:mcp": "pnpm --filter @quizz/mcp start",
+    "start:web": "pnpm --filter @quizz/web start",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky",
+    "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "quiz",
+    "claude",
+    "learning"
+  ],
+  "author": "Thomas Bustos",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@next/eslint-plugin-next": "^15.0.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^2.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
