@@ -1,0 +1,17 @@
+{
+  "quiz": {
+    "defaultDifficulty": "medium",
+    "defaultQuestionCount": 5,
+    "defaultQuestionTypes": ["multiple-choice"],
+    "maxQuestions": 20
+  },
+  "theme": "hacker",
+  "storage": {
+    "type": "memory",
+    "sqlitePath": "./quizz.db"
+  },
+  "llm": {
+    "model": "claude-sonnet-4-20250514",
+    "maxTokens": 8192
+  }
+}
