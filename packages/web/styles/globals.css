@@ -7,16 +7,31 @@
 :root {
   --bg: #0d1117;
   --surface: #161b22;
+  --surface-hover: #1c2128;
   --text: #c9d1d9;
   --text-muted: #8b949e;
   --primary: #d4a574;
   --accent: #00ff41;
   --error: #f85149;
   --border: #30363d;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --surface-hover: #f0f2f5;
+  --text: #1a1a1a;
+  --text-muted: #57606a;
+  --primary: #8b6534;
+  --accent: #2ea043;
+  --error: #cf222e;
+  --border: #d0d7de;
+  color-scheme: light;
 }
 
 html {
-  color-scheme: dark;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 body {
