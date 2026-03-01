@@ -6,6 +6,10 @@
   Turn your Claude conversations into learning opportunities.
 </p>
 
+<p align="center">
+  <img src="assets/screenshot.png" alt="Quizz MCP Screenshot" width="700" />
+</p>
+
 ---
 
 When you're exploring a new concept, debugging code, or learning a framework through Claude or Claude Code, how much are you actually retaining? Quizz MCP helps you engage deeper with your AI interactions by generating quizzes that test your understanding - giving you new perspectives and revealing gaps you didn't know you had.
@@ -58,6 +62,10 @@ pnpm dev
 
 Opens at `http://localhost:9004`
 
+<p align="center">
+  <img src="assets/screenshot-home.png" alt="Home Screen" width="600" />
+</p>
+
 ### 4. Generate Your First Quiz
 
 In Claude Code, just ask:
@@ -97,6 +105,16 @@ Then it opens the quiz in your browser.
 
 After each answer, you can chat with Claude about the question. Ask for clarification, explore edge cases, or dive deeper into concepts. Click the expand button (or `Cmd+Shift+E`) for a full-screen chat experience.
 
+<p align="center">
+  <img src="assets/screenshot-chat-sidebar.png" alt="Chat Sidebar" width="700" />
+</p>
+
+The chat supports code blocks, markdown, LaTeX math, and more:
+
+<p align="center">
+  <img src="assets/screenshot-chat-fullscreen.png" alt="Chat Fullscreen" width="700" />
+</p>
+
 ### Difficulty Levels
 
 | Level | Pass Threshold | What It Tests |
@@ -105,6 +123,14 @@ After each answer, you can chat with Claude about the question. Ask for clarific
 | Medium | 60% | Comprehension, patterns, "how" and "why" |
 | Hard | 75% | Analysis, connections, trade-offs |
 | Expert | 85% | Critical evaluation, edge cases, alternatives |
+
+## Quiz Results
+
+When you complete a quiz, you'll see your score and a summary of all questions. Hit **Try Again** to reinforce your learning with spaced repetition.
+
+<p align="center">
+  <img src="assets/screenshot-results.png" alt="Quiz Results" width="600" />
+</p>
 
 ## Viewing Your Progress
 
@@ -123,11 +149,16 @@ Or use the `quiz_stats` tool to see:
 
 Go to Settings (gear icon) to configure your theme:
 
+<p align="center">
+  <img src="assets/screenshot-themes.png" alt="Theme Settings" width="600" />
+</p>
+
 | Theme | Style |
 |-------|-------|
 | **Hacker** | Matrix green terminal aesthetic (default) |
 | **Claude Community** | Warm Claude orange tones |
 | **Minimal** | Clean blue GitHub-style |
+| **Thomas** | Green accents + amber buttons |
 
 Your preference is saved locally.
 
@@ -144,6 +175,12 @@ Your preference is saved locally.
 **Database errors?**
 - The database is stored at `~/.quizz/data.db`
 - Both MCP server and web UI share this database
+
+<p align="center">
+  <img src="assets/screenshot-correct.png" alt="Correct Answer" width="600" />
+</p>
+
+> **Fun fact:** SQLite is the most deployed database in the world - it's in your phone, browser, car, and now tracking your quiz scores. Your learning progress is literally stored in the same format as aircraft flight systems. No pressure.
 
 ## For Developers
 
